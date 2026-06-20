@@ -46,6 +46,68 @@ ppl-workout --help
    ppl-workout --list
    ```
 
+### Sample CLI Outputs
+
+#### Standard Text Format (`ppl-workout push --exercises 4`)
+```text
+==================================================
+🏋️  CUSTOM PPL WORKOUT ROUTINE  🏋️
+==================================================
+Split: PUSH
+Total Exercises: 4
+--------------------------------------------------
+
+1. Bench Press
+   Type:         Compound
+   Target:       Chest
+   Scheme:       4 Sets x 5-8 Reps
+   Instructions: Lie flat on a bench, grip the barbell slightly wider than shoulder-width, lower it to your chest, and press up explosively.
+
+2. Overhead Press
+   Type:         Compound
+   Target:       Shoulders
+   Scheme:       3 Sets x 6-10 Reps
+   Instructions: Press a barbell overhead from shoulder level while standing, keeping your core and glutes tightly braced.
+
+3. Cable Flyes
+   Type:         Isolation
+   Target:       Chest
+   Scheme:       3 Sets x 10-12 Reps
+   Instructions: Bring cables together in a smooth hugging motion, focusing on a deep contraction at the center of the chest.
+
+4. Lateral Raises
+   Type:         Isolation
+   Target:       Shoulders
+   Scheme:       3 Sets x 12-15 Reps
+   Instructions: Raise dumbbells out to your sides up to shoulder height to isolate and widen the lateral deltoid heads.
+
+==================================================
+```
+
+#### JSON Format (`ppl-workout legs --exercises 2 --json`)
+```json
+[
+  {
+    "name": "Barbell Squat",
+    "split": "legs",
+    "muscle": "quads",
+    "type": "compound",
+    "description": "Rest a barbell across your upper back, drop your hips until thighs are parallel to the floor, and drive back up.",
+    "sets": 4,
+    "reps": "5-8"
+  },
+  {
+    "name": "Leg Curls",
+    "split": "legs",
+    "muscle": "hamstrings",
+    "type": "isolation",
+    "description": "Lie or sit in the machine and pull the heel pad firmly toward your glutes to isolate the hamstrings.",
+    "sets": 3,
+    "reps": "12-15"
+  }
+]
+```
+
 ---
 
 ## Programmatic Library Usage
