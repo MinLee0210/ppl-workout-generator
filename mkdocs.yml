@@ -1,0 +1,46 @@
+site_name: PPL Workout Generator
+site_url: https://github.com/MinLee0210/ppl-workout-generator
+repo_url: https://github.com/MinLee0210/ppl-workout-generator
+site_description: Intelligent, sports-science based Push-Pull-Legs (PPL) workout generator library.
+site_author: Workout Generator Contributors
+
+theme:
+  name: material
+  palette:
+    # Light/Dark mode auto-toggle
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: teal
+      accent: teal
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: teal
+      accent: teal
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
+  features:
+    - navigation.tabs
+    - navigation.sections
+    - navigation.top
+    - search.suggest
+    - search.highlight
+    - content.code.copy
+
+markdown_extensions:
+  - pymdownx.highlight:
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
+  - pymdownx.superfences
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+
+nav:
+  - Home: index.md
+  - Command Line Interface: cli.md
+  - Python API Reference: api.md
+  - Exercise Database: exercises.md
